@@ -14,6 +14,7 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
+import java.util.random.RandomGenerator;
 
 /**
  * This class is a simple application that writes a random number on a file.
@@ -57,8 +58,13 @@ public class MiniGUI {
          * Handlers
          */
         write.addActionListener(new ActionListener() {
+            /*
+             * Part 3
+             */ 
             @Override
             public void actionPerformed(final ActionEvent e) {
+                final int number = randomGenerator.nextInt(); 
+                System.out.println(number);
                 System.out.println(randomGenerator.nextInt());
             }
         });
