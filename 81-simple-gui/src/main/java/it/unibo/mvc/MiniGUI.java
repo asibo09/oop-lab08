@@ -4,9 +4,12 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Dimension;
+import java.awt.TextField;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,6 +25,7 @@ public class MiniGUI {
 
     private static final String TITLE = "A very simple GUI application";
     private static final int PROPORTION = 5;
+    private static final String RESULT_CONTENT="RESULT";
     private final Random randomGenerator = new Random();
     private final JFrame frame = new JFrame(TITLE);
 
@@ -40,7 +44,12 @@ public class MiniGUI {
         canvas.add(panel, BorderLayout.CENTER);
         panel.add(write);
         
-        
+        /*
+         * Part 2
+         */
+        final JTextField result= new JTextField(RESULT_CONTENT);
+        canvas.add(result, BorderLayout.NORTH);
+
         
         frame.setContentPane(canvas);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
