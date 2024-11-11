@@ -18,7 +18,7 @@ public class DeathNoteImplementation implements DeathNote{
     @Override
     public String getRule(int ruleNumber) {
         if (ruleNumber<1 || ruleNumber> RULES.size()) {
-            throw new IllegalArgumentException("Rules index doesn't exist");
+            throw new IllegalArgumentException("Rules index "+ ruleNumber + " doesn't exist");
         }
         return RULES.get(ruleNumber-1);
     }
