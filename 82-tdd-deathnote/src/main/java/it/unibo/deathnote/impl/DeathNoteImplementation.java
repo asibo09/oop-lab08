@@ -26,7 +26,7 @@ public class DeathNoteImplementation implements DeathNote{
     @Override
     public void writeName(String name) {
         Objects.requireNonNull(name);
-        lastName=name;
+        this.lastName=name;
         death.put(name, new Death());
     }
 
